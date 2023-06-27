@@ -1,6 +1,7 @@
 from webinterface import webinterface
 from flask import render_template, send_file, request, jsonify
-from werkzeug.utils import safe_join
+#from werkzeug.utils import safe_join # As of 2023/06/26, this line throws an error. Changing it to werkzeug.security appears to fix the issue
+from werkzeug.security import safe_join
 from lib.functions import find_between, theaterChase, theaterChaseRainbow, sound_of_da_police, scanner, breathing, \
     rainbow, rainbowCycle, chords, fastColorWipe, play_midi, clamp
 import psutil
